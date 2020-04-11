@@ -1,0 +1,27 @@
+//----------------------------------------------------
+// mixin
+//----------------------------------------------------
+
+// メディアクエリのブレークポイントを設定
+$breakpoints: (
+  'xs': 'screen and (max-width: 544px)',
+  'sm': 'screen and (max-width: 767px)',
+  'md': 'screen and (max-width: 992px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)',
+  'pc': 'screen and (min-width: 769px)',
+) !default;
+
+// メディアクエリを簡潔に書けるようにしたmixin
+@mixin mq($breakpoijnt: sm) {
+  @media #{map-get($breakpoints, $breakpoijnt)} {
+    @content;
+  }
+}
+
+// IE対応のmixin
+@mixin ie() {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}

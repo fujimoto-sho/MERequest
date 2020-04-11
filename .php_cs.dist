@@ -1,0 +1,178 @@
+<?php
+
+return PhpCsFixer\Config::create()
+    ->setRules([
+        // 複数行のDocCommentsの各行にはアスタリスク[PSR-5]が必要であり、最初の行に揃える必要があります。
+        'align_multiline_comment' => true,
+        // 配列の各要素は、1回だけインデントする必要があります。
+        'array_indentation' => true,
+        // PHP配列は、構成された構文を使用して宣言する必要があります。
+        'array_syntax' => ['syntax' => 'short'],
+        // 二項演算子は、構成されたとおりにスペースで囲む必要があります。
+        'binary_operator_spaces' => [
+            'align_double_arrow' => true,
+            'align_equals'       => null,
+        ],
+        // 名前空間宣言の後には1行の空白行が必要です。
+        'blank_line_after_namespace' => true,
+        // PHPの開始タグと同じ行にコードがなく、その後に空白行が続くことを確認してください。
+        'blank_line_after_opening_tag' => true,
+        // 各構造体の本体は中括弧で囲む必要があります。
+        // ブレースは適切に配置する必要があります。
+        // ブレースの本体は適切にインデントする必要があります。
+        'braces' => true,
+        // キャストと変数の間には、単一のスペースが必要です。
+        'cast_spaces' => true,
+        // クラス、特性、およびインターフェース要素は、1行の空白行で区切る必要があります。
+        'class_attributes_separation' => true,
+        // クラス、特性、またはインターフェース定義のキーワードを囲む空白は、1つのスペースでなければなりません。
+        'class_definition' => ['multi_line_extends_each_single_line' => false],
+        // `isset（$ var）&&`を複数回使用することは、1回の呼び出しで行う必要があります。
+        'combine_consecutive_issets' => true,
+        // 複数のアイテムで「unset」を呼び出すには、1回の呼び出しで行う必要があります。
+        'combine_consecutive_unsets' => true,
+        // null入力可能な型ヒントの余分なスペースを削除します。
+        'compact_nullable_typehint' => true,
+        // declareステートメントの等号は、スペースで囲むか、構成に従っていない必要があります。
+        'declare_equal_normalize' => ['space' => 'single'],
+        // Doctrineアノテーションは4つのスペースでインデントされなければなりません。
+        'doctrine_annotation_indentation' => true,
+        // PHPコードは、長い `<？php`タグまたは短いエコー` <？= `タグを使用し、他のタグのバリエーションは使用しないでください。
+        'full_opening_tag' => true,
+        // インポートされたFQCNパラメーターを変換し、関数の引数の型を短いバージョンに戻します。
+        'fully_qualified_strict_types' => true,
+        // 関数宣言ではスペースを適切に配置する必要があります。
+        'function_declaration' => true,
+        // 関数の引数とその型ヒントの間に不足しているスペースを追加します。
+        'function_typehint_space' => true,
+        // 構成された注釈は、PHPDocから除外する必要があります。
+        'general_phpdoc_annotation_remove' => true,
+        // 単一行コメントでは、ハッシュ「＃」ではなく、二重スラッシュ「//」を使用する必要があります。
+        'hash_to_slash_comment' => true,
+        // Include / Requireとファイルパスは、単一のスペースで分割する必要があります。
+        // ファイルパスは角かっこで囲まないでください。
+        'include' => true,
+        // 可能であれば、プリインクリメントまたはポストインクリメントおよびデクリメント演算子を使用する必要があります。
+        'increment_style' => ['style' => 'post'],
+        // PHPの開始タグと同じ行にコードがないことを確認してください。
+        'linebreak_after_opening_tag' => true,
+        // キャストは小文字で記述する必要があります。
+        'lowercase_cast' => true,
+        // PHP定数 `true`、` false`、および `null`は小文字でなければなりません。
+        'lowercase_constants' => true,
+        // PHPキーワードは小文字でなければなりません。
+        'lowercase_keywords' => true,
+        // クラスの静的参照「self」、「static」、「parent」は小文字でなければなりません。
+        'lowercase_static_reference' => true,
+        // 正しい定数を使用して、マジック定数を参照する必要があります。
+        'magic_constant_casing' => true,
+        // マジックメソッドの定義と呼び出しでは、正しい大文字と小文字を使用する必要があります。
+        'magic_method_casing' => true,
+        // メソッドの引数とメソッド呼び出しでは、各コンマの前にスペースがあってはならず、各コンマの後にスペースが1つなければなりません。
+        // 引数リストは複数の行に分割されてもよく、後続の各行は1回インデントされます。
+        // その場合、リストの最初の項目は次の行になければならず、1行につき1つの引数のみが存在する必要があります。
+        'method_argument_space' => true,
+        // メソッドは1つの空白行で区切る必要があります。
+        'method_separation' => true,
+        // DocBlocksは2つのアスタリスクで開始する必要があり、複数行コメントは開始スラッシュの後の1つのアスタリスクで開始する必要があります。
+        // 両方とも、終了スラッシュの前に単一のアスタリスクで終わる必要があります。
+        'multiline_comment_opening_closing' => true,
+        // セミコロンを閉じる前に複数行の空白を禁止するか、連鎖呼び出しのためにセミコロンを新しい行に移動します。
+        'multiline_whitespace_before_semicolons' => true,
+        // PHPで定義された関数は、正しい大文字小文字を使用して呼び出す必要があります。
+        'native_function_casing' => true,
+        // 新しいキーワードで作成されたすべてのインスタンスには、中括弧が必要です。
+        'new_with_braces' => true,
+        // 文字列の前にバイナリフラグがあってはなりません。
+        'no_binary_string' => true,
+        // クラス開始中括弧の後に空行がないはずです。
+        'no_blank_lines_after_class_opening' => true,
+        // docblockと文書化された要素の間に空白行があってはなりません。
+        'no_blank_lines_after_phpdoc' => true,
+        // 空ではないケース本体でフォールスルーが意図的な場合は、コメントが必要です。
+        'no_break_comment' => true,
+        // PHPのみを含むファイルでは、php形式の終了タグを省略する必要があります。
+        'no_closing_tag' => true,
+        // 空のPHPDocブロックがあってはなりません。
+        'no_empty_phpdoc' => true,
+        // 無駄なセミコロンステートメントを削除します。
+        'no_empty_statement' => true,
+        // 名前空間宣言行には、先頭の空白を含めないでください。
+        'no_leading_namespace_whitespace' => true,
+        // 言語構成体の「print」または「echo」を使用する必要があります。
+        'no_mixed_echo_print' => true,
+        // 短いエコーの `<？=`を長い形式の `<？php echo`構文に置き換えます。
+        'no_short_echo_tag' => true,
+        // セミコロンを閉じる前の単一行の空白は禁止されています。
+        'no_singleline_whitespace_before_semicolons' => true,
+        // メソッドまたは関数呼び出しを行うとき、メソッドまたは関数名と左括弧の間にスペースがあってはなりません。
+        'no_spaces_after_function_name' => true,
+        // オフセットブレースの周りにスペースがあってはなりません。
+        'no_spaces_around_offset' => true,
+        // 左括弧の後にスペースがあってはなりません。
+        // 閉じ括弧の前にスペースがあってはなりません。
+        'no_spaces_inside_parenthesis' => true,
+        // リスト関数呼び出しの末尾のコンマを削除します。
+        'no_trailing_comma_in_list_call' => true,
+        // PHPの単一行配列には、末尾のコンマを含めないでください。
+        'no_trailing_comma_in_singleline_array' => true,
+        // 非空白行の末尾にある末尾の空白を削除します。
+        'no_trailing_whitespace' => true,
+        // コメントまたはPHPDoc内に末尾のスペースがあってはなりません。
+        'no_trailing_whitespace_in_comment' => true,
+        // 未使用の「use」ステートメントは削除する必要があります。
+        'no_unused_imports' => true,
+        // 配列宣言では、各コンマの前に空白があってはなりません。
+        'no_whitespace_before_comma_in_array' => true,
+        // 空白行の末尾にある末尾の空白を削除します。
+        'no_whitespace_in_blank_line' => true,
+        // 配列インデックスは、常に中括弧を使用して書き込まれる必要があります。
+        'normalize_index_brace' => true,
+        // オブジェクト `T_OBJECT_OPERATOR``-> `の前後にスペースがあってはなりません。
+        'object_operator_without_whitespace' => true,
+        // インポートの並び替えを行います。
+        'ordered_imports' => true,
+        // すべてのPHPUnitテストクラスは、内部としてマークする必要があります。
+        'php_unit_internal_class' => true,
+        // 設定に従って、PHPUnitテストメソッドのキャメル（またはスネーク）ケースを強制します。
+        'php_unit_method_casing' => true,
+        // 構成に応じて、戻り値の宣言では、コロンの前にスペースを1つ入れるか、スペースを入れないでください。
+        'return_type_declaration' => true,
+        // 命令はセミコロンで終了する必要があります。
+        'semicolon_after_instruction' => true,
+        // キャスト `（boolean）`と `（integer）`は `（bool）`と `（int）`、 `（double）`と `（real）`は `（float）`、 `（binary）と書く必要があります `as`（string） `。
+        'short_scalar_cast' => true,
+        // `void`を返したいreturnステートメントは` null`を返すべきではありません。
+        'simplified_null_return' => true,
+        // 終了タグのないPHPファイルは、常に単一の空の改行で終了する必要があります。
+        'single_blank_line_at_eof' => true,
+        // ステートメントごとに宣言されるプロパティまたは定数は複数あってはなりません。
+        'single_class_element_per_statement' => true,
+        // 宣言ごとに1つのuseキーワードが必要です。
+        'single_import_per_statement' => true,
+        // 各ネームスペースの使用は独自の行に移動する必要があり、useステートメントのブロックの後に1行の空白行が必要です。
+        'single_line_after_imports' => true,
+        // 単純な文字列の二重引用符を単一引用符に変換します。
+        'single_quote' => true,
+        // ケースの後には、セミコロンではなくコロンを続ける必要があります。
+        'switch_case_semicolon_to_colon' => true,
+        // コロンとケース値の間の余分なスペースを削除します。
+        'switch_case_space' => true,
+        // 三項演算子の周りのスペースを標準化します。
+        'ternary_operator_spaces' => true,
+        // 可能な場合は、「null」合体演算子「??」を使用します。
+        // Requires PHP >= 7.0.
+        'ternary_to_null_coalescing' => true,
+        // PHPの複数行配列には、末尾にコンマが必要です。
+        'trailing_comma_in_multiline_array' => true,
+        // 配列は、先頭または末尾の単一行スペースなしで、関数/メソッドの引数のようにフォーマットする必要があります。
+        'trim_array_spaces' => true,
+        // すべてのプロパティとメソッドで可視性を宣言する必要があります。 `abstract`と` final`は可視性の前に宣言されなければなりません; `static`は可視性の後に宣言しなければなりません。
+        'visibility_required' => true,
+        // 配列宣言では、各コンマの後に空白がなければなりません。
+        'whitespace_after_comma_in_array' => true,
+    ])
+    ->setFinder(PhpCsFixer\Finder::create()
+        ->exclude('vendor')
+        ->in(__DIR__)
+    );

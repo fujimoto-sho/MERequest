@@ -1,0 +1,11 @@
+//----------------------------------------------------
+// link
+//----------------------------------------------------
+.u-link-under {
+  color: $font-color_link;
+  text-decoration: underline !important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}

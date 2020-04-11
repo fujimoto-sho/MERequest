@@ -1,0 +1,19 @@
+//----------------------------------------------------
+// 開閉する検索バー
+//----------------------------------------------------
+
+.p-search-toggle {
+  height: 50px;
+  font-size: $font-size_m;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  background: $bg-color_corp2;
+  transition: opacity 0.4s;
+
+  &:hover {
+    opacity: 0.7;
+    transition: opacity 0.4s;
+  }
+}

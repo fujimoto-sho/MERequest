@@ -1,0 +1,14 @@
+//----------------------------------------------------
+// ページタイトル
+//----------------------------------------------------
+
+.c-title {
+  font-size: $font-size_xxl;
+  font-weight: bold;
+  text-align: center;
+  word-break: break-all;
+
+  @include mq() {
+    font-size: $font-size_xl;
+  }
+}

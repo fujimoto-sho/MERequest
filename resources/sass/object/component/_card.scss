@@ -1,0 +1,123 @@
+//----------------------------------------------------
+// カード
+//----------------------------------------------------
+
+.c-card {
+  position: relative;
+  display: block;
+  width: 250px;
+  padding: $space_m;
+  margin: $space_xxl 50px;
+  font-size: $font-size_ss;
+  background: #fff;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+
+  &--direct-message {
+    padding: 8px;
+    border: 2px solid;
+  }
+
+  @include mq() {
+    margin: $space_xxl calc((100vw - 250px) / 2);
+  }
+
+  &__badge {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    padding: 15px 0;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+    text-align: center;
+    background: $bg-color_secondary;
+    border-radius: 50%;
+  }
+
+  &__title {
+    height: 48px;
+    font-size: $font-size_default;
+    font-weight: bold;
+    word-break: break-all;
+  }
+
+  &__border {
+    margin-right: -10px;
+    margin-left: -10px;
+    border: none;
+    border-top: 1px solid #ccc;
+
+    &--direct-message {
+      margin-right: -8px;
+      margin-left: -8px;
+    }
+  }
+
+  &__num {
+    margin-bottom: $space_m;
+    font-size: $font-size_default;
+    font-weight: bold;
+    color: $font-color_err;
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  &__msg-title {
+    font-weight: bold;
+  }
+
+  &__msg {
+    padding: 2px $space_s;
+    margin-bottom: $space_m;
+    border: 1px solid $border-color_default;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    margin-bottom: $space_m;
+  }
+
+  &__username {
+    width: 200px;
+    padding-left: $space_s;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__type {
+    padding: 5px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+
+    &--single {
+      background: $bg-color_primary;
+    }
+
+    &--revenue {
+      background: $bg-color_secondary;
+    }
+  }
+
+  &__like {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--active {
+      color: $font-color_like;
+    }
+  }
+
+  &__like-count {
+    margin-top: 3px;
+  }
+}

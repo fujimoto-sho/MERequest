@@ -1,0 +1,20 @@
+//----------------------------------------------------
+// text
+//----------------------------------------------------
+.u-td-u {
+  text-decoration: underline !important;
+}
+
+.u-text-oneline {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.u-wb-all {
+  word-break: break-all !important;
+}
+
+.u-ws-pw {
+  white-space: pre-wrap !important;
+}

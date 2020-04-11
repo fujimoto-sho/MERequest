@@ -1,0 +1,51 @@
+//----------------------------------------------------
+// 変数
+//----------------------------------------------------
+
+// フォントカラー
+$font-color_default: #333;
+$font-color_link: #0199e8;
+$font-color_placeholder: #4a9a98;
+$font-color_err: #de6641;
+$font-color_primary: #00aee0;
+$font-color_like: #b0e000;
+
+// ボーダーカラー
+$border-color_default: #ccc;
+$border-color_corp: #fff;
+
+// バックグラウンドカラー
+$bg-color_default: #f5f5f5;
+$bg-color_corp: #fff;
+$bg-color_corp2: #ccc;
+$bg-color_primary: #00aee0;
+$bg-color_secondary: #de6641;
+$bg-color_flash-message: rgba(0, 176, 224, 0.5); //#00AEE0
+$bg-color_direct-message: rgba(0, 0, 0, 0.4); //#000
+
+// サイトの横幅
+$site-width: 960px;
+
+// フォントサイズ
+$font-size_ss: 12px;
+$font-size_s: 14px;
+$font-size_default: 16px;
+$font-size_m: 18px;
+$font-size_l: 20px;
+$font-size_xl: 22px;
+$font-size_xxl: 28px;
+$font-size_3l: 32px;
+
+// スペース
+$space_s: 5px;
+$space_m: 10px;
+$space_l: 15px;
+$space_xl: 20px;
+$space_xxl: 30px;
+$space_3l: 40px;
+$space_4l: 60px;
+
+// フォント
+$font-family_default: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro',
+  メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$font-family_corp: 'Nunito', sans-serif;

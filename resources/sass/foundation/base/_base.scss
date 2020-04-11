@@ -1,0 +1,47 @@
+//----------------------------------------------------
+// 共通部分
+//----------------------------------------------------
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: $font-family_default;
+  font-size: $font-size_default;
+  line-height: 1.5;
+  color: $font-color_default;
+  letter-spacing: 0.1em;
+  background: $bg-color_default;
+  text-size-adjust: 100%;
+}
+
+p,
+a {
+  -webkit-font-smooothing: antialiased;
+}
+
+a {
+  color: $font-color_default;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: $font-color_link;
+  transition: 0.3s;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+::placeholder {
+  color: #ccc;
+}

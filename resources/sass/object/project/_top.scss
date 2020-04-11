@@ -1,0 +1,73 @@
+//----------------------------------------------------
+// TOP画面
+//----------------------------------------------------
+
+.p-top {
+  font-family: $font-family_corp;
+
+  &__intro {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    color: #fff;
+    background-image: url('img/top/top_hero.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+
+  &__intro::before {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+    content: '';
+    background: inherit;
+    filter: blur(5px);
+  }
+
+  &__intro-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__intro-content {
+    margin: 20px 0;
+    font-weight: bold;
+  }
+
+  &__concept {
+    background: $bg-color_corp;
+  }
+
+  &__concept-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+
+    &--under {
+      border-bottom: solid 3px $bg-color_primary;
+    }
+  }
+
+  &__concept-content {
+    margin: 20px 0;
+  }
+
+  &__section {
+    width: 800px;
+    padding: 60px 60px;
+    margin: 0 auto;
+
+    @include mq() {
+      width: 100%;
+      padding: 60px 10px;
+    }
+  }
+
+  &__btn {
+    width: 300px;
+  }
+}

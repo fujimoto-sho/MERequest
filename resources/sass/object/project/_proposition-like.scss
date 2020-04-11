@@ -1,0 +1,22 @@
+//----------------------------------------------------
+// 案件詳細　お気に入り
+//----------------------------------------------------
+
+.p-proposition-like {
+  text-align: right;
+  cursor: pointer;
+
+  &--active {
+    color: $font-color_like;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__icon {
+    font-size: $font-size_xxl;
+  }
+}

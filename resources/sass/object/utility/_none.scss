@@ -1,0 +1,14 @@
+//----------------------------------------------------
+// pc, sp
+//----------------------------------------------------
+.u-pc-none {
+  @include mq('pc') {
+    display: none !important;
+  }
+}
+
+.u-sp-none {
+  @include mq() {
+    display: none !important;
+  }
+}

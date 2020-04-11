@@ -1,0 +1,34 @@
+//----------------------------------------------------
+// サイドバー
+//----------------------------------------------------
+
+.l-sidebar {
+  position: fixed;
+  left: -260px;
+  z-index: 3;
+  width: 250px;
+  height: 100vh;
+  background: $bg-color_corp;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s;
+
+  &--active {
+    transition: all 0.4s;
+    transform: translateX(260px);
+  }
+
+  &__item {
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+  }
+}

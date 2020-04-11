@@ -1,0 +1,14 @@
+//----------------------------------------------------
+// 全体を囲うラッパー
+//----------------------------------------------------
+
+.l-wrapper {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 50px;
+
+  @include ie() {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+}

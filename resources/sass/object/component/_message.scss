@@ -1,0 +1,59 @@
+//----------------------------------------------------
+// パブリックメッセージ・ダイレクトメッセージ
+//----------------------------------------------------
+
+.c-message {
+  display: flex;
+  font-size: $font-size_s;
+
+  &__user-caption {
+    padding: 2px;
+    font-size: $font-size_ss;
+    color: #fff;
+    text-align: center;
+    background: $bg-color_primary;
+    border-radius: 5px;
+  }
+
+  &__left {
+    width: 50px;
+  }
+
+  &__right {
+    width: calc(100% - 50px);
+    padding-left: $space_m;
+  }
+
+  &__username {
+    font-weight: bold;
+    word-break: break-all;
+  }
+
+  &__balloon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 70px;
+    padding: $space_m;
+    word-break: break-all;
+    background: $bg-color_default;
+    border-radius: 5px;
+
+    &::after {
+      position: absolute;
+      top: 10px;
+      left: -16px;
+      display: inline-block;
+      content: '';
+      border: 8px solid transparent;
+      border-right: 8px solid $bg-color_default;
+    }
+  }
+
+  &__date {
+    font-size: 12px;
+    color: $font-color_placeholder;
+    text-align: right;
+  }
+}

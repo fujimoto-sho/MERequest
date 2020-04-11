@@ -1,0 +1,60 @@
+//----------------------------------------------------
+// ハンバーガーメニュー
+//----------------------------------------------------
+
+.p-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-right: 1px solid $border-color_default;
+
+  &__content {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    span {
+      position: absolute;
+      left: 0;
+      box-sizing: border-box;
+      display: inline-block;
+      width: 100%;
+      height: 4px;
+      background-color: $font-color_default;
+      border-radius: 4px;
+      transition: all 0.4s;
+
+      &:nth-of-type(1) {
+        top: 0;
+      }
+
+      &:nth-of-type(2) {
+        top: 14px;
+      }
+
+      &:nth-of-type(3) {
+        bottom: 0;
+      }
+    }
+
+    &--active span {
+      &:nth-of-type(1) {
+        transform: translateY(12px) rotate(-45deg);
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        transform: translateY(-15px) rotate(45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+//----------------------------------------------------
+// 「ログインを保存する」チェックボックス
+//----------------------------------------------------
+
+.p-remember {
+  font-size: $font-size_s;
+
+  &__check {
+    display: none;
+  }
+
+  &__label {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 26px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+
+    &::before {
+      position: absolute;
+      top: 12px;
+      left: 11px;
+      display: block;
+      width: 5px;
+      height: 9px;
+      margin-top: -7px;
+      content: '';
+      border-right: 3px solid #0171bd;
+      border-bottom: 3px solid #0171bd;
+      opacity: 0;
+      transition: opacity 0.2s linear;
+      transform: rotate(45deg);
+    }
+
+    &:checked::before {
+      transform: rotate(-45deg) scale(1, 1);
+    }
+
+    &::after {
+      position: absolute;
+      top: 12px;
+      left: 5px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-top: -10px;
+      content: '';
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      transition: border-color 0.2s linear;
+    }
+  }
+
+  &__check:checked + &__label::before {
+    opacity: 1;
+  }
+}

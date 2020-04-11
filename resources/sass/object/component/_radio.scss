@@ -1,0 +1,43 @@
+//----------------------------------------------------
+// ラジオボタン
+//----------------------------------------------------
+
+.c-radio {
+  display: none;
+
+  &__group {
+    padding: $space_m 0;
+  }
+
+  &__label {
+    cursor: pointer;
+
+    &::before {
+      position: relative;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      margin-right: $space_s;
+      vertical-align: top;
+      cursor: pointer;
+      content: '';
+      background: $bg-color_default;
+      border: 1px solid $border-color_default;
+      border-radius: 100%;
+      transition: all 0.25s ease;
+    }
+  }
+
+  &:checked + &__label {
+    &::before {
+      background-color: $bg-color_primary;
+      box-shadow: inset 0 0 0 4px $bg-color_default;
+    }
+  }
+
+  &:focus + &__label {
+    &::before {
+      outline: none;
+    }
+  }
+}

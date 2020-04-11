@@ -1,0 +1,21 @@
+//----------------------------------------------------
+// 入力オブジェクト用のコンテナ
+//----------------------------------------------------
+
+.c-container {
+  width: 700px;
+  margin: $space_4l auto 0;
+
+  @include mq() {
+    width: 100%;
+  }
+
+  &--corp {
+    padding: 60px 95px;
+    background: $bg-color_corp;
+
+    @include mq() {
+      padding: 60px 10px;
+    }
+  }
+}

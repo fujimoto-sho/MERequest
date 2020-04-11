@@ -1,0 +1,27 @@
+//----------------------------------------------------
+// フッター
+//----------------------------------------------------
+
+.l-footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+
+  @include mq() {
+    padding-right: 70px;
+    padding-left: 10px;
+  }
+
+  &__copyright {
+    font-size: $font-size_s;
+
+    @include mq() {
+      font-size: $font-size_ss;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+//----------------------------------------------------
+// ボタン
+//----------------------------------------------------
+
+.c-btn {
+  width: 100%;
+  height: 50px;
+  font-size: $font-size_m;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  transform: translateY(-2px);
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: none;
+    transition: all 0.3s;
+    transform: none;
+  }
+
+  &--primary {
+    color: #fff;
+    background: $bg-color_primary;
+  }
+
+  &--secondary {
+    color: #fff;
+    background: $bg-color_secondary;
+  }
+
+  &--ghost {
+    color: $bg-color_primary;
+    background: #fff;
+    border: 2px solid $bg-color_primary;
+  }
+
+  &--loading {
+    opacity: 0.5;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}
