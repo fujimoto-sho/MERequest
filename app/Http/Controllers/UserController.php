@@ -102,4 +102,16 @@ class UserController extends Controller
     {
         return $this->user->loginUser();
     }
+
+    /**
+     * CSRFトークンのリフレッシュ
+     *
+     * @return mixed
+     */
+    public function refreshToken(Request $request)
+    {
+        $request->session()->regenerateToken();
+
+        return $request->session()->token();
+    }
 }

@@ -43,7 +43,7 @@ class ApplicationNotification extends Mailable
     public function build()
     {
         return $this->view('emails.application')
-            ->subject('[match] 案件の応募がありました')
+            ->subject('[MERequest] 案件の応募がありました')
             ->with([
                 'proposition_title'  => $this->proposition_title,
                 'opponent_user_name' => $this->opponent_user_name,

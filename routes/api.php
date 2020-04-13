@@ -3,11 +3,7 @@
 //================================================================================
 // CSRFトークンのリフレッシュ
 //================================================================================
-Route::get('/refresh-token', function (Illuminate\Http\Request $request) {
-    $request->session()->regenerateToken();
-
-    return $request->session()->token();
-});
+Route::get('/refresh-token','UserController@refreshToken')->name('refreshToken');
 
 //================================================================================
 // ユーザー認証が必要ないルーティング
