@@ -1,7 +1,7 @@
 # MERequest (Movie Editor Request)
 
 ## URL
-https://wiste-lab.com/portfolio/merequest
+https://merequest.wiste-lab.com
 
 ### テストユーザー
 - メールアドレス
