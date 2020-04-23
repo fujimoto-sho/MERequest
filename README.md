@@ -14,6 +14,7 @@ https://merequest.wiste-lab.com
 - どこよりもわかりやすく、使いやすいがコンセプト
 - SPA（Vue.js、Vuex、Vue Routerを使用）
 - APIはLaravelで作成
+- Atomic Designベースのコンポーネント設計
 
 ## 実装した機能
 - ユーザ登録
@@ -60,3 +61,4 @@ https://merequest.wiste-lab.com
     - Homestead ( Vagrant + VirtualBox )
 - デザイン
     - Adobe XD
+
