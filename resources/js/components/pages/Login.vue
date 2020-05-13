@@ -41,6 +41,12 @@
       <div class="u-fs-s u-mt30 u-alC">
         パスワードをお忘れの方は<router-link class="u-link-under" to="/password/email">こちら</router-link>
       </div>
+      <div class="u-fs-s u-mt30 u-alC">
+        テストメールアドレス：example@example.com
+      </div>
+      <div class="u-fs-s u-alC">
+        テストパスワード：testtest
+      </div>
     </form>
   </div>
 </template>
