@@ -34,6 +34,73 @@ class PropositionController extends Controller
      * @param Request $request
      * @return mixed
      */
+    /**
+     * @OA\Info(title="MERequestのAPIドキュメント", version="1.0")
+     */
+
+    /**
+     * @OA\Get(
+     *     path="/api/propositions",
+     *     @OA\Parameter(
+     *         name="free_word",
+     *         description="検索項目：フリーワード",
+     *         in="query",
+     *         required=false,
+     *         type="string"
+     *     ),
+     *     @OA\Parameter(
+     *         name="status",
+     *         description="検索項目：募集状況",
+     *         in="query",
+     *         required=false,
+     *         type="boolean"
+     *     ),
+     *     @OA\Parameter(
+     *         name="type",
+     *         description="検索項目：案件種別",
+     *         in="query",
+     *         required=false,
+     *         type="number"
+     *     ),
+     *     @OA\Parameter(
+     *         name="single_number_min",
+     *         description="検索項目：金額（最小）",
+     *         in="query",
+     *         required=false,
+     *         type="number"
+     *     ),
+     *     @OA\Parameter(
+     *         name="single_number_max",
+     *         description="検索項目：金額（最大）",
+     *         in="query",
+     *         required=false,
+     *         type="number"
+     *     ),
+     *     @OA\Parameter(
+     *         name="revenue_number_min",
+     *         description="検索項目：レベニューシェア配分率（最小）",
+     *         in="query",
+     *         required=false,
+     *         type="number"
+     *     ),
+     *     @OA\Parameter(
+     *         name="revenue_number_max",
+     *         description="検索項目：レベニューシェア配分率（最大）",
+     *         in="query",
+     *         required=false,
+     *         type="number"
+     *     ),
+     *     @OA\Parameter(
+     *         name="order",
+     *         description="検索結果の並び順",
+     *         in="query",
+     *         required=false,
+     *         type="string"
+     *     ),
+     *     @OA\Response(response="200", description="案件一覧を取得する"),
+     *     @OA\Response(response="404", description="NG")
+     * )
+     */
     public function index(Request $request)
     {
         return $this->proposition->index($request->all());

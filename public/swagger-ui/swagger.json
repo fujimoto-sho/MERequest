@@ -1,0 +1,80 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "MERequestのAPIドキュメント",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/propositions": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\PropositionController::index",
+                "parameters": [
+                    {
+                        "name": "free_word",
+                        "in": "query",
+                        "description": "検索項目：フリーワード",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "検索項目：募集状況",
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "検索項目：案件種別",
+                        "required": false,
+                        "type": "number"
+                    },
+                    {
+                        "name": "single_number_min",
+                        "in": "query",
+                        "description": "検索項目：金額（最小）",
+                        "required": false,
+                        "type": "number"
+                    },
+                    {
+                        "name": "single_number_max",
+                        "in": "query",
+                        "description": "検索項目：金額（最大）",
+                        "required": false,
+                        "type": "number"
+                    },
+                    {
+                        "name": "revenue_number_min",
+                        "in": "query",
+                        "description": "検索項目：レベニューシェア配分率（最小）",
+                        "required": false,
+                        "type": "number"
+                    },
+                    {
+                        "name": "revenue_number_max",
+                        "in": "query",
+                        "description": "検索項目：レベニューシェア配分率（最大）",
+                        "required": false,
+                        "type": "number"
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "検索結果の並び順",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "案件一覧を取得する"
+                    },
+                    "404": {
+                        "description": "NG"
+                    }
+                }
+            }
+        }
+    }
+}
