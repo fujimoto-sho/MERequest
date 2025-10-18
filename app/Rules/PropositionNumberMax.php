@@ -2,7 +2,7 @@
 
 namespace App\Rules;
 
-use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Contracts\Validation\ValidationRule;
 
 /**
  * バリデーションルール 案件タイプよって入力された数値の最大値を変更する
@@ -16,7 +16,7 @@ use Illuminate\Contracts\Validation\Rule;
  * @property int max 最大値
  * @package App\Rules
  */
-class PropositionNumberMax implements Rule
+class PropositionNumberMax implements ValidationRule
 {
     /**
      * 初期処理
@@ -39,25 +39,15 @@ class PropositionNumberMax implements Rule
     /**
      * 検証ルール
      *
-     * バリデーションOK：true
-     * バリデーションNG：false
-     *
      * @param string $attribute
      * @param mixed $value 入力された値
-     * @return bool
+     * @param \Closure $fail
+     * @return void
      */
-    public function passes($attribute, $value)
+    public function validate(string $attribute, $value, \Closure $fail): void
     {
-        return $value <= $this->max;
-    }
-
-    /**
-     * バリデーションエラー時のメッセージ
-     *
-     * @return string メッセージ
-     */
-    public function message()
-    {
-        return $this->max . ' 以下のみ有効です';
+        if ($value > $this->max) {
+            $fail($this->max . ' 以下のみ有効です');
+        }
     }
 }

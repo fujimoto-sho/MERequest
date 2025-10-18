@@ -2,7 +2,7 @@
 
 namespace App\Rules;
 
-use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
  *
  * @package App\Rules
  */
-class NotExistsWithdrawUsers implements Rule
+class NotExistsWithdrawUsers implements ValidationRule
 {
     /**
      * 初期処理
@@ -27,27 +27,17 @@ class NotExistsWithdrawUsers implements Rule
     /**
      * 検証ルール
      *
-     * バリデーションOK：true
-     * バリデーションNG：false
-     *
      * @param string $attribute
      * @param mixed $value 入力された値
-     * @return bool
+     * @param \Closure $fail
+     * @return void
      */
-    public function passes($attribute, $value)
+    public function validate(string $attribute, $value, \Closure $fail): void
     {
         // 退会しているかの判定
         // withdraw_usersテーブルにメールアドレスが存在したら退会済とする
-        return  DB::table('withdraw_users')->where('email', $value)->doesntExist();
-    }
-
-    /**
-     * バリデーションエラー時のメッセージ
-     *
-     * @return string メッセージ
-     */
-    public function message()
-    {
-        return '認証に失敗しました';
+        if (DB::table('withdraw_users')->where('email', $value)->exists()) {
+            $fail('認証に失敗しました');
+        }
     }
 }

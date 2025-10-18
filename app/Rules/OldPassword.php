@@ -2,7 +2,7 @@
 
 namespace App\Rules;
 
-use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
  *
  * @package App\Rules
  */
-class OldPassword implements Rule
+class OldPassword implements ValidationRule
 {
     /**
      * 初期処理
@@ -28,26 +28,17 @@ class OldPassword implements Rule
     /**
      * 検証ルール
      *
-     * バリデーションOK：true
-     * バリデーションNG：false
-     *
      * @param string $attribute
      * @param mixed $value 入力された値
-     * @return bool
+     * @param \Closure $fail
+     * @return void
      */
-    public function passes($attribute, $value)
+    public function validate(string $attribute, $value, \Closure $fail): void
     {
         // ハッシュ値のチェック
-        return Hash::check($value, Auth::user()->getAuthPassword());
+        if (!Hash::check($value, Auth::user()->getAuthPassword())) {
+            $fail('現在のパスワードと一致しません');
+        }
     }
 
-    /**
-     * バリデーションエラー時のメッセージ
-     *
-     * @return string メッセージ
-     */
-    public function message()
-    {
-        return '現在のパスワードと一致しません';
-    }
 }

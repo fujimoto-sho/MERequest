@@ -37,14 +37,14 @@ class Proposition extends Model
     ];
 
     /**
-     * 日付へキャストする属性
+     * 属性のキャスト
      *
      * @var array
      */
-    protected $dates = [
-        'created_at',
-        'updated_at',
-        'deleted_at',
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
     ];
 
     /**
