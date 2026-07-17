@@ -1,0 +1,35 @@
+# サクラサーバ データベース設定の代替案
+
+## 設定1: localhostを使用（推奨）
+DB_CONNECTION=mysql
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=wiste-lab_merequest
+DB_USERNAME=wiste-lab
+DB_PASSWORD=4tpLQ7NCgAvPwANJJrE8
+
+## 設定2: 127.0.0.1を使用
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=wiste-lab_merequest
+DB_USERNAME=wiste-lab
+DB_PASSWORD=4tpLQ7NCgAvPwANJJrE8
+
+## 設定3: 専用MySQLサーバー（接続元制限を%に設定後）
+DB_CONNECTION=mysql
+DB_HOST=mysql.wiste-lab.sakura.ne.jp
+DB_PORT=3306
+DB_DATABASE=wiste-lab_merequest
+DB_USERNAME=wiste-lab
+DB_PASSWORD=4tpLQ7NCgAvPwANJJrE8
+
+## 設定4: サーバーの内部IPを使用
+DB_CONNECTION=mysql
+DB_HOST=10.0.0.1
+DB_PORT=3306
+DB_DATABASE=wiste-lab_merequest
+DB_USERNAME=wiste-lab
+DB_PASSWORD=4tpLQ7NCgAvPwANJJrE8
+
+
